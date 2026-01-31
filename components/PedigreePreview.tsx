@@ -24,7 +24,7 @@ function T(props: { text: string; x: number; y: number; w?: number; size?: numbe
   );
 }
 
-export default function PedigreePreview({ data }: { data: Pedigree }) {
+export default function PedigreePreview({ data, mode }: { data: Pedigree; mode?: string }) {
   const lineage = data.lineage?.length === 14 ? data.lineage : Array.from({ length: 14 }, () => "");
 
   const W = 1536;
